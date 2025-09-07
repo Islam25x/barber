@@ -1,0 +1,332 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Staatliches", sans-serif;
+}
+/* <!-- first-section start  --> */
+#first-section {
+  position: relative;
+  height: 92.1vh;
+  background: url(imgs/main\ photo.jpg) no-repeat center center/cover;
+  align-content: center;
+}
+#first-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* <!-- first-section end  --> */
+/* <!-- customers section start --> */
+#customers .album .top img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#customers .album .bottom div img {
+  width: 100%;
+  height: 100%;
+}
+/* <!-- customers section end --> */
+/* <!-- services section start -->  */
+#services {
+  padding: 60px 0;
+}
+#services .bottom {
+  margin-top: 5rem;
+}
+#services .main-circle {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#services .main-circle img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#services .service {
+  display: flex;
+  position: absolute;
+  text-align: center;
+}
+
+#services .service img {
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  position: relative;
+  margin-bottom: 10px;
+  object-fit: cover;
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+#services .service h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#services .service p {
+  font-size: 13px;
+  color: #666;
+}
+
+#services .service1 {
+  top: 20px;
+  left: 50%;
+  transform: translateX(18%);
+}
+#services .service2 {
+  top: 32%;
+  right: -182px;
+}
+#services .service3 {
+  bottom: 9%;
+  right: -147px;
+}
+#services .service4 {
+  bottom: 30px;
+  left: -57%;
+}
+#services .service5 {
+  bottom: 40%;
+  left: -155px;
+}
+#services .service6 {
+  top: 20px;
+  left: -33px;
+}
+
+#services {
+  padding: 60px 0;
+}
+#services .bottom {
+  margin-top: 5rem;
+}
+#services .main-circle {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#services .main-circle img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#services .service {
+  display: flex;
+  position: absolute;
+  text-align: center;
+}
+
+#services .service img {
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  position: relative;
+  margin-bottom: 10px;
+  object-fit: cover;
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+#services .service h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#services .service p {
+  font-size: 13px;
+  color: #666;
+}
+
+#services .service1 {
+  top: 20px;
+  left: 50%;
+  transform: translateX(18%);
+}
+#services .service2 {
+  top: 32%;
+  right: -178px;
+}
+#services .service3 {
+  bottom: 9%;
+  right: -147px;
+}
+#services .service4 {
+  bottom: 30px;
+  left: -57%;
+}
+#services .service5 {
+  bottom: 40%;
+  left: -155px;
+}
+#services .service6 {
+  top: 20px;
+  left: -33px;
+}
+
+@media (max-width: 768px) {
+  #services .main-circle {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  #services .main-circle .main-service {
+    display: none;
+  }
+  #services .bottom {
+    margin-top: 0rem;
+  }
+  #services .service {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    width: 90%;
+    transform: translate(0);
+    text-align: center;
+  }
+  #services .service4,
+  #services .service5,
+  #services .service6 {
+    flex-direction: column-reverse;
+  }
+
+  #services .service img {
+    margin: 0 0 10px 0;
+  }
+
+  #services .icon-content {
+    width: 100%;
+  }
+}
+
+/* <!-- services section end --> */
+/* <!-- work section start --> */
+#work {
+  position: relative;
+  height: 70vh;
+  background: url("imgs/work.jpg") no-repeat center center/cover;
+  margin-bottom: 1rem;
+  align-content: center;
+}
+#work::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#work .work-ctn img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-top: 1rem;
+  cursor: pointer;
+  background-color: #d7bb80;
+  border-radius: 50%;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+#work .work-ctn img:hover {
+  background-color: #c49b3f;
+}
+#work #videoWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: none;
+}
+#work #videoWrapper video {
+  width: 70vh;
+  height: 100%;
+  object-fit: cover;
+}
+#work #videoWrapper iframe {
+  width: 100%;
+  height: 70vh;
+}
+/* <!-- work section end --> */
+/* <!-- Contact section start  --> */
+#Contact {
+  padding: 3rem 0;
+}
+
+#Contact iframe {
+  min-height: 350px;
+  border: 0;
+  width: 100%;
+}
+
+#Contact .right img {
+  width: 2.5rem;
+  flex-shrink: 0;
+}
+#Contact .right p{
+  margin: 0;
+}
+
+#Contact .right .R-con {
+  align-items: center;
+  gap: 10px;
+}
+
+#Contact .right .R-con h5 {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #Contact .col-lg-8,
+  #Contact .col-md-8,
+  #Contact .col-sm-12 {
+    width: 100%;
+  }
+
+  #Contact .right .R-con {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #Contact .right img {
+    margin-bottom: 0.5rem;
+    width: 3rem;
+  }
+}
+
+/* <!-- Contact section end  --> */
