@@ -38,15 +38,12 @@ body {
 /* <!-- customers section end --> */
 /* <!-- services section start -->  */
 #services {
-  padding: 60px 0;
-}
-#services .bottom {
-  margin-top: 5rem;
+  padding: 3.75rem 0;
 }
 #services .main-circle {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 25rem;
+  height: 25rem;
   margin: 0 auto;
   border-radius: 50%;
   display: flex;
@@ -55,8 +52,8 @@ body {
 }
 
 #services .main-circle img {
-  width: 350px;
-  height: 350px;
+  width: 21.875rem;
+  height: 21.875rem;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -68,63 +65,63 @@ body {
 }
 
 #services .service img {
-  width: 90px;
-  height: 90px;
+  width: 5.625rem;
+  height: 5.625rem;
   background-color: white;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   object-fit: cover;
-  border: 1px solid black;
+  border: 0.0625rem solid black;
   padding: 0.5rem;
   border-radius: 50%;
 }
 
 #services .service h4 {
-  font-size: 16px;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  margin-bottom: 0.3125rem;
 }
 
 #services .service p {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #666;
 }
 
 #services .service1 {
-  top: 20px;
+  top: 1.25rem;
   left: 50%;
   transform: translateX(18%);
 }
 #services .service2 {
   top: 32%;
-  right: -182px;
+  right: -11.375rem;
 }
 #services .service3 {
-  bottom: 9%;
-  right: -147px;
+  bottom: 0.5625rem;
+  right: -9.1875rem;
 }
 #services .service4 {
-  bottom: 30px;
+  bottom: 1.875rem;
   left: -57%;
 }
 #services .service5 {
   bottom: 40%;
-  left: -155px;
+  left: -9.6875rem;
 }
 #services .service6 {
-  top: 20px;
-  left: -33px;
+  top: 1.25rem;
+  left: -2.0625rem;
 }
 
 #services {
-  padding: 60px 0;
+  padding: 3.75rem 0;
 }
 #services .bottom {
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 #services .main-circle {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 25rem;
+  height: 25rem;
   margin: 0 auto;
   border-radius: 50%;
   display: flex;
@@ -133,8 +130,8 @@ body {
 }
 
 #services .main-circle img {
-  width: 350px;
-  height: 350px;
+  width: 21.875rem;
+  height: 21.875rem;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -146,54 +143,54 @@ body {
 }
 
 #services .service img {
-  width: 90px;
-  height: 90px;
+  width: 5.625rem;
+  height: 5.625rem;
   background-color: white;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   object-fit: cover;
-  border: 1px solid black;
+  border: 0.0625rem solid black;
   padding: 0.5rem;
   border-radius: 50%;
 }
 
 #services .service h4 {
-  font-size: 16px;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  margin-bottom: 0.3125rem;
 }
 
 #services .service p {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #666;
 }
 
 #services .service1 {
-  top: 20px;
+  top: 1.25rem;
   left: 50%;
   transform: translateX(18%);
 }
 #services .service2 {
   top: 32%;
-  right: -178px;
+  right: -11.125rem;
 }
 #services .service3 {
-  bottom: 9%;
-  right: -147px;
+  bottom: 0.5625rem;
+  right: -9.1875rem;
 }
 #services .service4 {
-  bottom: 30px;
+  bottom: 1.875rem;
   left: -57%;
 }
 #services .service5 {
   bottom: 40%;
-  left: -155px;
+  left: -9.6875rem;
 }
 #services .service6 {
-  top: 20px;
-  left: -33px;
+  top: 1.25rem;
+  left: -2.0625rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   #services .main-circle {
     width: 100%;
     height: auto;
@@ -211,7 +208,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px auto;
+    margin: 1.25rem auto;
     width: 90%;
     transform: translate(0);
     text-align: center;
@@ -223,7 +220,7 @@ body {
   }
 
   #services .service img {
-    margin: 0 0 10px 0;
+    margin: 0 0 0.625rem 0;
   }
 
   #services .icon-content {
@@ -250,8 +247,8 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 #work .work-ctn img {
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
   object-fit: cover;
   margin-top: 1rem;
   cursor: pointer;
@@ -288,7 +285,7 @@ body {
 }
 
 #Contact iframe {
-  min-height: 350px;
+  min-height: 21.875rem;
   border: 0;
   width: 100%;
 }
@@ -303,14 +300,14 @@ body {
 
 #Contact .right .R-con {
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 #Contact .right .R-con h5 {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   #Contact .col-lg-8,
   #Contact .col-md-8,
   #Contact .col-sm-12 {
