@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -170,11 +170,11 @@ body {
   transform: translateX(18%);
 }
 #services .service2 {
-  top: 32%;
+  top: 35%;
   right: -11.125rem;
 }
 #services .service3 {
-  bottom: 0.5625rem;
+  bottom: 1.625rem;
   right: -9.1875rem;
 }
 #services .service4 {
@@ -294,7 +294,7 @@ body {
   width: 2.5rem;
   flex-shrink: 0;
 }
-#Contact .right p{
+#Contact .right p {
   margin: 0;
 }
 
