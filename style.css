@@ -47,11 +47,11 @@ header img {
   color: #fff;
   text-align: center;
 }
-  #first-section .carousel-caption p {
-    font-size: 2rem;
-  }
+#first-section .carousel-caption p {
+  font-size: 2rem;
+}
 #first-section .carousel-caption .btn {
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   font-size: 1.4rem;
 }
 @media (max-width: 768px) {
@@ -79,6 +79,7 @@ header img {
   height: 30rem;
   display: block;
   margin: 0 auto;
+  object-fit: cover;
 }
 #customers .album img,
 #About img {

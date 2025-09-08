@@ -46,9 +46,3 @@ window.addEventListener("scroll", () => {
 scrollBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
-
-document.querySelectorAll('#branchTabs button[data-bs-toggle="tab"]').forEach(tab => {
-    tab.addEventListener('shown.bs.tab', function (e) {
-        AOS.refresh(); 
-    });
-});
