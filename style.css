@@ -30,6 +30,14 @@ header img {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
+#first-section .logo {
+  background-color: white;
+  width: 6rem;
+  height: 6rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
 .carousel-caption {
   position: absolute;
   top: 50%;
@@ -291,6 +299,35 @@ header img {
 #Contact .right .R-con h5 {
   margin: 0;
 }
+#contactCarousel .carousel-control-prev,
+#contactCarousel .carousel-control-next {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contactCarousel .carousel-control-prev:hover,
+#contactCarousel .carousel-control-next:hover {
+  background-color: #ffd700;
+  opacity: 1;
+}
+
+#contactCarousel .carousel-control-prev-icon,
+#contactCarousel .carousel-control-next-icon {
+  filter: invert(1);
+  width: 1.2rem;
+  height: 1.2rem;
+  background-size: 100% 100%;
+}
+
 
 @media (max-width: 48rem) {
   #Contact .col-lg-8,
