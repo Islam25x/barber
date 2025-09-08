@@ -6,12 +6,19 @@
 body {
   font-family: "Staatliches", sans-serif;
 }
+header img {
+  width: 7rem;
+  height: 3rem;
+  object-fit: cover;
+}
 /* <!-- first-section start  --> */
 #first-section {
   position: relative;
   height: 92.1vh;
-  background: url(imgs/main\ photo.jpg) no-repeat center center/cover;
-  align-content: center;
+}
+#first-section .carousel-item img {
+  height: 92.1vh;
+  object-fit: cover;
 }
 #first-section::before {
   content: "";
@@ -21,25 +28,48 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
 }
 /* <!-- first-section end  --> */
+#About img {
+  background-color: rgb(218, 218, 218);
+}
 /* <!-- customers section start --> */
 #customers .album .top img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 30rem;
   display: block;
   margin: 0 auto;
 }
-
+#customers .album img,
+#About img {
+  filter: grayscale(100%);
+  transition: all 0.3s ease-in-out;
+}
+#customers .album img:hover,
+#About img:hover {
+  filter: grayscale(0%);
+}
 #customers .album .bottom div img {
   width: 100%;
-  height: 100%;
+  height: 17rem;
+  object-fit: cover;
 }
 /* <!-- customers section end --> */
 /* <!-- services section start -->  */
 #services {
   padding: 3.75rem 0;
 }
+
 #services .main-circle {
   position: relative;
   width: 25rem;
@@ -64,94 +94,49 @@ body {
   text-align: center;
 }
 
-#services .service img {
+#services .service .icon {
+  position: relative;
   width: 5.625rem;
   height: 5.625rem;
   background-color: white;
-  position: relative;
-  margin-bottom: 0.625rem;
-  object-fit: cover;
-  border: 0.0625rem solid black;
-  padding: 0.5rem;
-  border-radius: 50%;
-}
-
-#services .service h4 {
-  font-size: 1rem;
-  margin-bottom: 0.3125rem;
-}
-
-#services .service p {
-  font-size: 0.8125rem;
-  color: #666;
-}
-
-#services .service1 {
-  top: 1.25rem;
-  left: 50%;
-  transform: translateX(18%);
-}
-#services .service2 {
-  top: 32%;
-  right: -11.375rem;
-}
-#services .service3 {
-  bottom: 0.5625rem;
-  right: -9.1875rem;
-}
-#services .service4 {
-  bottom: 1.875rem;
-  left: -57%;
-}
-#services .service5 {
-  bottom: 40%;
-  left: -9.6875rem;
-}
-#services .service6 {
-  top: 1.25rem;
-  left: -2.0625rem;
-}
-
-#services {
-  padding: 3.75rem 0;
-}
-#services .bottom {
-  margin-top: 1rem;
-}
-#services .main-circle {
-  position: relative;
-  width: 25rem;
-  height: 25rem;
-  margin: 0 auto;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#services .main-circle img {
-  width: 21.875rem;
-  height: 21.875rem;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-#services .service {
-  display: flex;
-  position: absolute;
-  text-align: center;
-}
-
-#services .service img {
-  width: 5.625rem;
-  height: 5.625rem;
-  background-color: white;
-  position: relative;
   margin-bottom: 0.625rem;
+  z-index: 1;
+}
+
+#services .service .icon img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 50%;
   border: 0.0625rem solid black;
   padding: 0.5rem;
+  z-index: 2;
+}
+
+#services .service .icon::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
+  border-top: 3px solid #ffd700;
   border-radius: 50%;
+  transform: rotate(0deg);
+  transition: transform 1s linear, border-color 2s ease;
+  z-index: 1;
+}
+
+#services .service .icon:hover::after {
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  transform: rotate(360deg);
+  border-color: #ffd700;
 }
 
 #services .service h4 {
@@ -219,7 +204,7 @@ body {
     flex-direction: column-reverse;
   }
 
-  #services .service img {
+  #services .service .icon {
     margin: 0 0 0.625rem 0;
   }
 
@@ -327,3 +312,40 @@ body {
 }
 
 /* <!-- Contact section end  --> */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+#scrollTopBtn span {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* SVG progress ring */
+.progress-ring {
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress-ring__circle {
+  stroke-dasharray: 163.36; /* 2 * π * r (r=26) */
+  stroke-dashoffset: 163.36;
+  transition: stroke-dashoffset 0.25s linear;
+}
