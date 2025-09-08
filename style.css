@@ -47,6 +47,28 @@ header img {
   color: #fff;
   text-align: center;
 }
+  #first-section .carousel-caption p {
+    font-size: 2rem;
+  }
+#first-section .carousel-caption .btn {
+  padding: .5rem 2rem;
+  font-size: 1.4rem;
+}
+@media (max-width: 768px) {
+  #first-section .carousel-caption p {
+    font-size: 1.2rem;
+  }
+
+  #first-section .carousel-caption .btn {
+    padding: 0.4rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  #first-section .logo {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
 /* <!-- first-section end  --> */
 #About img {
   background-color: rgb(218, 218, 218);
@@ -327,7 +349,6 @@ header img {
   height: 1.2rem;
   background-size: 100% 100%;
 }
-
 
 @media (max-width: 48rem) {
   #Contact .col-lg-8,
