@@ -1,13 +1,28 @@
-AOS.init({
-    duration: 800,
-    once: true,
-    offset: 120
-});
-
 const playBtn = document.getElementById("playBtn");
 const videoWrapper = document.getElementById("videoWrapper");
 const ytVideo = document.getElementById("ytVideo");
 
+window.addEventListener('load', function () {
+    // اختفاء الـ preloader بعد 1 ثانية (تقدر تغير المدة)
+    setTimeout(() => {
+        const preloader = document.getElementById('preloader');
+        preloader.style.opacity = '0';
+        preloader.style.transition = 'opacity 0.5s ease';
+
+        setTimeout(() => {
+            preloader.style.display = 'none';
+
+            const main = document.getElementById('mainContent');
+            main.style.display = 'block';
+
+            AOS.init({
+                duration: 800,
+                once: false,
+                offset: 120
+            });
+        }, 10);
+    }, 1000);
+});
 playBtn.addEventListener("click", () => {
     playBtn.style.display = "none";
     videoWrapper.style.display = "block";
@@ -45,4 +60,28 @@ window.addEventListener("scroll", () => {
 
 scrollBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// إعادة تشغيل الانيميشن عند فتح أي تاب
+document.querySelectorAll('#branchTabs button[data-bs-toggle="tab"]').forEach(tab => {
+    tab.addEventListener('shown.bs.tab', function () {
+        // إزالة active من كل التابات الأخرى
+        document.querySelectorAll('#branchTabsContent .tab-pane .zoom-in').forEach(el => {
+            el.classList.remove('active');
+        });
+
+        // إضافة active للتاب الحالي
+        const tabPane = document.querySelector(this.getAttribute('data-bs-target'));
+        tabPane.querySelectorAll('.zoom-in').forEach(el => {
+            void el.offsetWidth; // إعادة تفعيل الانيميشن
+            el.classList.add('active');
+        });
+    });
+});
+
+// عند التحميل لأول مرة، نضيف active للتاب المفتوح فقط
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#branchTabsContent .tab-pane.active .zoom-in').forEach(el => {
+        el.classList.add('active');
+    });
 });
