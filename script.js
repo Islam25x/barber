@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
 
             AOS.init({
                 duration: 800,
-                once: false,
+                once: true,
                 offset: 120
             });
         }, 10);
