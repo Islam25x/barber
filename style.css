@@ -91,7 +91,6 @@ header img {
 }
 #customers .album .bottom div img {
   width: 100%;
-  height: 17rem;
   object-fit: cover;
 }
 /* <!-- customers section end --> */
